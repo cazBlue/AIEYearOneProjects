@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="cpp\ActorFactory.cpp" />
+    <ClCompile Include="cpp\Bullet.cpp" />
+    <ClCompile Include="cpp\CollisionDector.cpp" />
+    <ClCompile Include="cpp\Enemy.cpp" />
+    <ClCompile Include="cpp\EnemyTurrret.cpp" />
+    <ClCompile Include="cpp\Game.cpp" />
+    <ClCompile Include="cpp\StateManager.cpp" />
+    <ClCompile Include="cpp\lodepng.cpp" />
+    <ClCompile Include="cpp\main.cpp" />
+    <ClCompile Include="cpp\Node.cpp" />
+    <ClCompile Include="cpp\OpenGLInit.cpp" />
+    <ClCompile Include="cpp\Actor.cpp" />
+    <ClCompile Include="cpp\PlayerTank.cpp" />
+    <ClCompile Include="cpp\TextureManager.cpp" />
+    <ClCompile Include="cpp\Turret.cpp" />
+    <ClCompile Include="cpp\SpriteBatch.cpp" />
+    <ClCompile Include="cpp\State_Game.cpp" />
+    <ClCompile Include="cpp\Texture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="header\ActorFactory.h" />
+    <ClInclude Include="header\Bullet.h" />
+    <ClInclude Include="header\CollisionDector.h" />
+    <ClInclude Include="header\Enemy.h" />
+    <ClInclude Include="header\EnemyTurrret.h" />
+    <ClInclude Include="header\Game.h" />
+    <ClInclude Include="header\StateManager.h" />
+    <ClInclude Include="header\lodepng.h" />
+    <ClInclude Include="header\Node.h" />
+    <ClInclude Include="header\OpenGLInit.h" />
+    <ClInclude Include="header\Actor.h" />
+    <ClInclude Include="header\PlayerTank.h" />
+    <ClInclude Include="header\TextureManager.h" />
+    <ClInclude Include="header\Turret.h" />
+    <ClInclude Include="header\SpriteBatch.h" />
+    <ClInclude Include="header\State_Game.h" />
+    <ClInclude Include="header\Texture.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="content\images\crate_sideup256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="content\shaders\FlatFragmentShader.glsl" />
+    <None Include="content\shaders\TextFragmentShader.glsl" />
+    <None Include="content\shaders\TexturedFragmentShader.glsl" />
+    <None Include="content\shaders\TexturedVertexShader.glsl" />
+    <None Include="content\shaders\textVertexShader.glsl" />
+    <None Include="content\shaders\VertexShader.glsl" />
+    <None Include="shaders\FlatFragmentShader.glsl" />
+    <None Include="shaders\TexturedFragmentShader.glsl" />
+    <None Include="shaders\VertexShader.glsl" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{51A6C928-837A-4DE1-BD4A-AC65A69BD227}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TinyTanks</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_USE_MATH_DEFINES;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)cpp\;$(ProjectDir)header\;$(ProjectDir)glfw_lib\include\GLFW\;$(projectDir)glfw_lib\glew\include\GL\;$(ProjectDir)content\;$(ProjectDir)content\shaders\;$(ProjectDir)\content\ft253\freetype-2.5.3\include\;$(SolutionDir)..\MathLib\include\h\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)glfw_lib\lib-msvc110\;$(SolutionDir)glfw_lib\glew\lib\Release\Win32\;$(SolutionDir)\content\oglft-0.9\liboglft;$(SolutionDir)..\MathLib\debug\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;glew32.lib;glew32s.lib;opengl32.lib;glu32.lib;Winmm.lib;MathLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
