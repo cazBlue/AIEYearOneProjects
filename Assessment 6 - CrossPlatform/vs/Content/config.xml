@@ -1,0 +1,94 @@
+<crossPlatformConfig>
+    <keys>
+        <hotReload>r</hotReload>
+    </keys>
+
+    <player>
+        <posX>10</posX>
+        <posY>350</posY>
+        <scale>0.5</scale>
+        <mass>50.0</mass>
+        <friction>10.0</friction>
+        <sprite>player</sprite>
+        <spaceMoveSpeed>600</spaceMoveSpeed>
+        <planetMoveSpeed>20</planetMoveSpeed>
+        <jumpSpeed>80</jumpSpeed>
+        <drawCollision>true</drawCollision>
+    </player>
+
+    <planets>
+	
+        <planet>  <!-- PLANET 5 -->
+            <posX>730</posX>
+            <posY>50</posY>        
+            <sprite>planet03_A01_256</sprite>
+            <centreX>128</centreX>
+            <centreY>128</centreY>
+            <gravity>500</gravity>
+            <scale>0.8</scale>
+            <collisionRadius>40</collisionRadius>
+            <effectiveRadius>100</effectiveRadius>
+            <drawCollision>true</drawCollision>            
+            <drawEffective>true</drawEffective>            
+        </planet> 
+		
+        <planet>  <!-- PLANET 4 -->
+            <posX>520</posX>
+            <posY>160</posY>        
+            <sprite>planet02_A01_256</sprite>
+            <centreX>128</centreX>
+            <centreY>128</centreY>
+            <gravity>500</gravity>
+            <scale>0.6</scale>
+            <collisionRadius>65</collisionRadius>
+            <effectiveRadius>150</effectiveRadius>
+            <drawCollision>true</drawCollision>            
+            <drawEffective>true</drawEffective>            
+        </planet>      
+
+        <planet>  <!-- PLANET 3 -->
+            <posX>500</posX>
+            <posY>400</posY>
+            <sprite>planet04_A01_256</sprite>
+            <centreX>128</centreX>
+            <centreY>128</centreY>
+            <gravity>500</gravity>
+            <scale>1.0</scale>
+            <collisionRadius>20</collisionRadius>
+            <effectiveRadius>220</effectiveRadius>
+            <drawCollision>true</drawCollision>            
+            <drawEffective>true</drawEffective>            
+        </planet>
+		
+		<planet>  <!-- PLANET 2 -->
+            <posX>230</posX>
+            <posY>100</posY>
+            <sprite>planet01_A01_256</sprite>
+            <centreX>128</centreX>
+            <centreY>128</centreY>
+            <gravity>500</gravity>
+            <scale>1.0</scale>
+            <collisionRadius>65</collisionRadius>
+            <effectiveRadius>170</effectiveRadius>
+            <drawCollision>true</drawCollision>            
+            <drawEffective>true</drawEffective>            
+        </planet>
+		
+        <planet>  <!-- PLANET 1 -->
+            <posX>80</posX>
+            <posY>400</posY>        
+            <sprite>planet03_A01_256</sprite>
+            <centreX>128</centreX>
+            <centreY>128</centreY>
+            <gravity>500</gravity>
+            <scale>1.0</scale>
+            <collisionRadius>40</collisionRadius>
+            <effectiveRadius>100</effectiveRadius>
+            <drawCollision>true</drawCollision>            
+            <drawEffective>true</drawEffective>            
+        </planet>  		
+        
+    </planets>
+
+    
+</crossPlatformConfig>

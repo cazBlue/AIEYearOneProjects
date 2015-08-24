@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{051043C1-BCC0-43EB-B257-7759193CAEF8}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CrossPlatform</RootNamespace>
+    <AssemblyName>PSMDeploy</AssemblyName>
+    <StartupObject>CrossPlatform.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Sce.PlayStation.Core" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\..\MonoGame-develop\ThirdParty\Lidgren.Network\Lidgren.Network.PSMobile.csproj">
+      <Project>{167676EE-E2D5-440A-BB2B-EFBD02BC8493}</Project>
+      <Name>Lidgren.Network.PSMobile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MonoGame-develop\MonoGame.Framework\MonoGame.Framework.PSMobile.csproj">
+      <Project>{EA26E76F-FDFE-4A8C-B5A3-C3B5761E28F9}</Project>
+      <Name>MonoGame.Framework.PSMobile</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\vs\Actor.cs">
+      <Link>Actor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\vs\CollisionDector.cs">
+      <Link>CollisionDector.cs</Link>
+    </Compile>
+    <Compile Include="..\..\vs\Config.cs">
+      <Link>Config.cs</Link>
+    </Compile>
+    <Compile Include="..\..\vs\Game1.cs">
+      <Link>Game1.cs</Link>
+    </Compile>
+    <Compile Include="..\..\vs\Planet.cs">
+      <Link>Planet.cs</Link>
+    </Compile>
+    <Compile Include="..\..\vs\Player.cs">
+      <Link>Player.cs</Link>
+    </Compile>
+    <Compile Include="MainApp.cs" />
+    <Compile Include="..\..\vs\Camera2D.cs">
+      <Link>Camera2D.cs</Link>
+    </Compile>
+    <Compile Include="..\..\vs\GameState.cs">
+      <Link>GameState.cs</Link>
+    </Compile>
+    <Compile Include="..\..\vs\GameStateMainGame.cs">
+      <Link>GameStateMainGame.cs</Link>
+    </Compile>
+    <Compile Include="..\..\vs\GameStateSplash.cs">
+      <Link>GameStateSplash.cs</Link>
+    </Compile>
+    <Compile Include="..\..\vs\Program.cs">
+      <Link>Program.cs</Link>
+    </Compile>
+    <Compile Include="..\..\vs\Sprite.cs">
+      <Link>Sprite.cs</Link>
+    </Compile>
+    <Compile Include="..\..\vs\StateManager.cs">
+      <Link>StateManager.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\edge_plain.xnb" />
+    <Content Include="Content\planet.xnb" />
+    <Content Include="Content\player.xnb" />
+  </ItemGroup>
+</Project>
