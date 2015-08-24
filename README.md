@@ -1,6 +1,6 @@
 # AIEYearOneProjects
-AIE year one projects - project dump from perforce of
+AIE year one projects 
 
+Moved to github from perforce to allow ongoing.
 
-bitwise release build
-https://www.dropbox.com/sh/upip2bcnt2lwexd/AAC5wFOHUv9y6682KLUea2Mea?dl=0
+Release builds have been zipped for easy access.
